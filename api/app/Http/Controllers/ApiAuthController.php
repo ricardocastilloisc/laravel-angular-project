@@ -21,6 +21,7 @@ class ApiAuthController extends Controller
 		} catch (JWTException $ex) {
 			return response()->json(['error' => 'something_went_wrog'], 500);
 		}
+		return response()->json(compact('token'));
 	}
     //
 }
